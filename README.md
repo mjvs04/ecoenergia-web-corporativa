@@ -10,7 +10,9 @@
 Este proyecto consiste en el desarrollo de una **página web corporativa** para la empresa ficticia **EcoEnergía S.L.**, dedicada a la instalación de placas solares y sistemas de autoconsumo energético.
 
 ### Problema que resuelve
-Los clientes potenciales tienen que contactar por teléfono o WhatsApp para obtener información básica, lo que genera pérdida de tiempo del equipo y pérdida de leads. Esta web soluciona ese problema ofreciendo:
+Los clientes potenciales tienen que contactar por **teléfono** o **WhatsApp** para obtener información básica, lo que genera pérdida de tiempo del equipo y cliente. 
+La empresa actualmente no tiene página web oficial.
+Esta web soluciona ese problema ofreciendo:
 - Información clara de servicios y precios aproximados
 - Calculadora de ahorro energético
 - Portafolio de proyectos realizados
