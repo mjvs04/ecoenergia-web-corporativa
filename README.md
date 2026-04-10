@@ -12,7 +12,6 @@ Este proyecto consiste en el desarrollo de una **página web corporativa** para 
 ### Problema que resuelve
 Los clientes potenciales tienen que contactar por **teléfono** o **WhatsApp** para obtener información básica, lo que genera pérdida de tiempo del equipo y cliente.  
 La empresa actualmente no tiene página web oficial. 
-
 Esta web soluciona ese problema ofreciendo:
 - Información clara de servicios y precios aproximados
 - Calculadora de ahorro energético
