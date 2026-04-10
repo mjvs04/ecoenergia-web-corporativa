@@ -1,7 +1,7 @@
 # Web Corporativa - EcoEnergía Local S.L.
 
 **Proyecto Final de Grado Medio en Sistemas Microinformáticos y Redes**  
-**Alumno:** [Jose Vargas Salazar]  
+**Alumno:** Jose Vargas Salazar  
 **Curso:** 2025/2026  
 **Fecha:** Abril 2026
 
