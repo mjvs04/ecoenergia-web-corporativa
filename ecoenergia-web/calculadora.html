@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Calculadora de ahorro solar — EcoEnergía Local S.L." />
+  <title>Calculadora | EcoEnergía Local S.L.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/calculadora.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="servicios.html" class="navbar__brand">
+      <div class="navbar__logo">☀</div>
+      <span class="brand-name">EcoEnergía Local</span>
+    </a>
+    <ul class="navbar__links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="calculadora.html" class="active">Calculadora</a></li>
+      <li><a href="portfolio.html">Proyectos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="contacto.html" class="btn-nav-cta desktop">Presupuesto</a>
+    <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </div>
+  <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
+    <a href="servicios.html">Servicios</a>
+    <a href="calculadora.html" class="active">Calculadora</a>
+    <a href="portfolio.html">Proyectos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="contacto.html" class="btn-nav-cta">Presupuesto</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO EDITORIAL -->
+  <header class="calc-hero">
+    <div class="container">
+      <div class="calc-hero__grid">
+        <div class="calc-hero__text">
+          <span class="eyebrow">Inversión Sostenible</span>
+          <h1 class="calc-hero__title">
+            Cuantifica tu Retorno
+            <span class="calc-hero__accent">Luminoso.</span>
+          </h1>
+          <p class="calc-hero__sub">
+            Nuestro estimador de grado arquitectónico calcula con precisión
+            tu potencial de ahorro, período de amortización e impacto ambiental.
+          </p>
+        </div>
+        <div class="calc-hero__visual">
+          <div class="calc-hero__img" aria-label="Instalación solar" role="img">🌞</div>
+          <div class="calc-hero__badge">
+            <span class="calc-hero__badge-icon">☀</span>
+            <div>
+              <strong>98.2%</strong>
+              <p>Eficiencia Promedio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BENTO GRID -->
+  <section class="calc-section">
+    <div class="container">
+      <div class="calc-bento">
+
+        <!-- FORMULARIO -->
+        <div class="calc-form card">
+          <h2 class="calc-form__title">Configuración del Sistema</h2>
+
+          <div class="calc-field">
+            <label class="calc-label" for="factura">Costo mensual de electricidad</label>
+            <div class="calc-input-wrap">
+              <span class="calc-prefix" aria-hidden="true">€</span>
+              <input
+                id="factura"
+                type="number"
+                inputmode="numeric"
+                placeholder="120"
+                min="10"
+                class="calc-input calc-input--large"
+                aria-describedby="factura-hint"
+              />
+            </div>
+            <span id="factura-hint" class="calc-hint">Importe de tu última factura eléctrica</span>
+          </div>
+
+          <fieldset class="calc-fieldset">
+            <legend class="calc-label">Orientación del tejado</legend>
+            <div class="calc-orient">
+              <button type="button" class="calc-orient__btn calc-orient__btn--active" data-orient="sur" aria-pressed="true">
+                ↓ Sur
+              </button>
+              <button type="button" class="calc-orient__btn" data-orient="este-oeste" aria-pressed="false">
+                ← Este / Oeste →
+              </button>
+            </div>
+          </fieldset>
+
+          <div class="calc-field">
+            <label class="calc-label" for="ciudad">Ubicación de la instalación</label>
+            <div class="calc-input-wrap">
+              <span class="calc-prefix" aria-hidden="true">📍</span>
+              <input
+                id="ciudad"
+                type="text"
+                placeholder="Tu ciudad"
+                class="calc-input"
+              />
+            </div>
+          </div>
+
+          <button type="button" class="calc-btn" id="calcBtn">
+            Actualizar Proyecciones
+          </button>
+        </div>
+
+        <!-- RESULTADOS -->
+        <div class="calc-results">
+
+          <!-- Métrica principal -->
+          <div class="calc-metric" aria-live="polite" aria-label="Resultados del cálculo">
+            <p class="calc-metric__label">Ahorro Estimado Anual</p>
+            <div class="calc-metric__value">
+              <span id="r-ahorro" class="calc-metric__num">—</span>
+              <span class="calc-metric__unit">/ año</span>
+            </div>
+            <div class="calc-metric__stats">
+              <div>
+                <strong id="r-retorno">—</strong>
+                <span>Amortización</span>
+              </div>
+              <div class="calc-metric__divider" aria-hidden="true"></div>
+              <div>
+                <strong>25 Años</strong>
+                <span>Vida de Garantía</span>
+              </div>
+              <div class="calc-metric__divider" aria-hidden="true"></div>
+              <div>
+                <strong id="r-potencia">—</strong>
+                <span>Potencia instalada</span>
+              </div>
+            </div>
+            <span class="calc-metric__deco" aria-hidden="true">☀</span>
+          </div>
+
+          <!-- Gráfica de barras -->
+          <div class="card calc-chart">
+            <h3 class="calc-card-label">Ahorros acumulados 10 años</h3>
+            <div class="calc-bars" id="calcBars" aria-label="Gráfico de ahorros en 10 años">
+              <!-- JS genera las barras -->
+            </div>
+            <div class="calc-bars__axis" aria-hidden="true">
+              <span>Año 1</span><span>Año 5</span><span>Año 10</span>
+            </div>
+          </div>
+
+          <!-- ROI tracker -->
+          <div class="card calc-roi">
+            <h3 class="calc-card-label">Recuperación de la Inversión</h3>
+            <div class="calc-roi__row">
+              <span>Inversión Total</span>
+              <strong id="r-inversion">—</strong>
+            </div>
+            <!-- Sunlight Progress Bar (DESIGN.md) -->
+            <div class="calc-roi__track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Porcentaje de inversión recuperado">
+              <div class="calc-roi__fill" id="roiFill"></div>
+            </div>
+            <div class="calc-roi__pcts">
+              <span id="roiPctLabel">Recuperado 0%</span>
+              <span id="roiPct">0%</span>
+            </div>
+            <div class="calc-roi__co2">
+              <strong>CO₂ evitado: </strong>
+              <span id="r-co2">—</span>
+            </div>
+          </div>
+
+        </div><!-- /calc-results -->
+      </div><!-- /calc-bento -->
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div class="navbar__logo">☀</div>
+        <span class="brand-name">EcoEnergía Local</span>
+      </div>
+      <p>Instaladores de energía solar fotovoltaica certificados.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Páginas</h4>
+      <ul>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+        <li><a href="portfolio.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Aviso Legal</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="mailto:info@ecoenergialocal.es">info@ecoenergialocal.es</a></li>
+        <li><a href="tel:+34931234567">+34 93 123 45 67</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 EcoEnergía Local S.L. — CIF: B-12345678</p>
+    <span>Jose Vargas Salazar · SMR 2025/2026</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/calculadora.js"></script>
+</body>
+</html>

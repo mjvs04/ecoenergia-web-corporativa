@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de proyectos solares — EcoEnergía Local S.L." />
+  <title>Proyectos | EcoEnergía Local S.L.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="servicios.html" class="navbar__brand">
+      <div class="navbar__logo">☀</div>
+      <span class="brand-name">EcoEnergía Local</span>
+    </a>
+    <ul class="navbar__links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="calculadora.html">Calculadora</a></li>
+      <li><a href="portfolio.html" class="active">Proyectos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="contacto.html" class="btn-nav-cta desktop">Presupuesto</a>
+    <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </div>
+  <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
+    <a href="servicios.html">Servicios</a>
+    <a href="calculadora.html">Calculadora</a>
+    <a href="portfolio.html" class="active">Proyectos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="contacto.html" class="btn-nav-cta">Presupuesto</a>
+  </div>
+</nav>
+
+<main class="portfolio-main">
+  <div class="container">
+
+    <!-- HERO EDITORIAL -->
+    <section class="port-hero" aria-labelledby="port-title">
+      <div class="port-hero__grid">
+        <div>
+          <span class="eyebrow">Compromiso Sostenible</span>
+          <h1 id="port-title" class="port-hero__title">
+            Luz solar hecha realidad<br>
+            <span class="port-hero__accent">en paisajes locales.</span>
+          </h1>
+        </div>
+        <div class="port-hero__desc">
+          <p>Más de 240 instalaciones solares de alto rendimiento en la costa mediterránea. Donde la precisión técnica se une a la armonía arquitectónica.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="port-filters" aria-label="Filtrar proyectos">
+      <div class="port-filters__pills" role="group" aria-label="Categorías de proyectos">
+        <button class="port-filter port-filter--active" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="port-filter" data-filter="residencial" aria-pressed="false">Residencial</button>
+        <button class="port-filter" data-filter="comercial" aria-pressed="false">Comercial</button>
+        <button class="port-filter" data-filter="industrial" aria-pressed="false">Industrial</button>
+      </div>
+    </section>
+
+    <!-- GRID DE PROYECTOS — 1→2→3 col -->
+    <section class="port-grid" id="portGrid" aria-label="Proyectos realizados">
+
+      <!-- Proyecto 1: Destacado (ocupa 2 columnas en ≥ md) -->
+      <article class="port-card port-card--featured" data-tipo="residencial" aria-label="Proyecto residencial destacado en Valencia">
+        <div class="port-card__img port-card__img--featured" aria-hidden="true">🏠</div>
+        <span class="port-card__tag">Proyecto Destacado</span>
+        <div class="port-card__info">
+          <div class="port-card__meta">
+            <span class="port-card__tipo">Residencial</span>
+            <span class="port-card__dot" aria-hidden="true"></span>
+            <span class="port-card__ciudad">Valencia</span>
+          </div>
+          <h2 class="port-card__title">Instalación Residencial en Valencia</h2>
+          <p class="port-card__desc">Obra maestra de arquitectura de energía cero con células monocristalinas de alta eficiencia, integradas perfectamente en el perfil costero.</p>
+          <div class="port-card__stats">
+            <div>
+              <p class="port-stat__label">Capacidad</p>
+              <p class="port-stat__val">12 <span>kWp</span></p>
+            </div>
+            <div>
+              <p class="port-stat__label">Rendimiento</p>
+              <p class="port-stat__val">18.4 <span>MWh</span></p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="port-card" data-tipo="comercial" aria-label="Proyecto comercial en Alicante">
+        <div class="port-card__img" aria-hidden="true">🏭</div>
+        <div class="port-card__info">
+          <div class="port-card__meta">
+            <span class="port-card__tipo">Comercial</span>
+            <span class="port-card__dot" aria-hidden="true"></span>
+            <span class="port-card__ciudad">Alicante</span>
+          </div>
+          <h3 class="port-card__title">Centro Logístico Marítimo</h3>
+          <div class="port-card__stats">
+            <div><p class="port-stat__label">Potencia Pico</p><p class="port-stat__val">35 <span>kWp</span></p></div>
+            <div><p class="port-stat__label">Unidades</p><p class="port-stat__val">85</p></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 3 -->
+      <article class="port-card" data-tipo="residencial" aria-label="Proyecto residencial en Denia">
+        <div class="port-card__img" aria-hidden="true">🏡</div>
+        <div class="port-card__info">
+          <div class="port-card__meta">
+            <span class="port-card__tipo">Residencial</span>
+            <span class="port-card__dot" aria-hidden="true"></span>
+            <span class="port-card__ciudad">Denia</span>
+          </div>
+          <h3 class="port-card__title">Refugio Modernista</h3>
+          <div class="port-card__stats">
+            <div><p class="port-stat__label">Potencia Pico</p><p class="port-stat__val">5 <span>kWp</span></p></div>
+            <div><p class="port-stat__label">Unidades</p><p class="port-stat__val">12</p></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 4 -->
+      <article class="port-card" data-tipo="industrial" aria-label="Proyecto industrial en Castellón">
+        <div class="port-card__img" aria-hidden="true">🏗️</div>
+        <div class="port-card__info">
+          <div class="port-card__meta">
+            <span class="port-card__tipo">Industrial</span>
+            <span class="port-card__dot" aria-hidden="true"></span>
+            <span class="port-card__ciudad">Castellón</span>
+          </div>
+          <h3 class="port-card__title">Red de Fábrica de Vidrio</h3>
+          <div class="port-card__stats">
+            <div><p class="port-stat__label">Potencia Pico</p><p class="port-stat__val">110 <span>kWp</span></p></div>
+            <div><p class="port-stat__label">Unidades</p><p class="port-stat__val">260</p></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 5 -->
+      <article class="port-card" data-tipo="residencial" aria-label="Proyecto residencial en Tarragona">
+        <div class="port-card__img" aria-hidden="true">🌊</div>
+        <div class="port-card__info">
+          <div class="port-card__meta">
+            <span class="port-card__tipo">Residencial</span>
+            <span class="port-card__dot" aria-hidden="true"></span>
+            <span class="port-card__ciudad">Tarragona</span>
+          </div>
+          <h3 class="port-card__title">Villa Mediterránea</h3>
+          <div class="port-card__stats">
+            <div><p class="port-stat__label">Potencia Pico</p><p class="port-stat__val">8 <span>kWp</span></p></div>
+            <div><p class="port-stat__label">Unidades</p><p class="port-stat__val">20</p></div>
+          </div>
+        </div>
+      </article>
+
+    </section><!-- /port-grid -->
+
+    <!-- CTA -->
+    <section class="port-cta" aria-labelledby="cta-title">
+      <div class="port-cta__content">
+        <h2 id="cta-title" class="port-cta__title">¿Listo para tu propia transición energética?</h2>
+        <p class="port-cta__sub">Nuestros ingenieros diseñarán una solución personalizada para tu ubicación específica.</p>
+        <div class="port-cta__btns">
+          <a href="calculadora.html" class="btn-primary" style="background:var(--sec-cont);color:var(--on-sec-cont);">Calcular Ahorro</a>
+          <a href="contacto.html" class="btn-outline" style="border-color:rgba(255,255,255,.35);color:#fff;">Consulta Técnica</a>
+        </div>
+      </div>
+      <div class="port-cta__stat" aria-label="Estadística de energía generada">
+        <strong>2.4 GWh</strong>
+        <span>Energía limpia generada este año en toda España</span>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div class="navbar__logo">☀</div>
+        <span class="brand-name">EcoEnergía Local</span>
+      </div>
+      <p>Instaladores de energía solar fotovoltaica certificados.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Páginas</h4>
+      <ul>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+        <li><a href="portfolio.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Aviso Legal</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="mailto:info@ecoenergialocal.es">info@ecoenergialocal.es</a></li>
+        <li><a href="tel:+34931234567">+34 93 123 45 67</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 EcoEnergía Local S.L. — CIF: B-12345678</p>
+    <span>Jose Vargas Salazar · SMR 2025/2026</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/portfolio.js"></script>
+</body>
+</html>

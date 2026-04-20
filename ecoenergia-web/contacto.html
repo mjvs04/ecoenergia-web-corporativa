@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacto — EcoEnergía Local S.L. Solicita tu presupuesto solar gratuito." />
+  <title>Contacto | EcoEnergía Local S.L.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contacto.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="servicios.html" class="navbar__brand">
+      <div class="navbar__logo">☀</div>
+      <span class="brand-name">EcoEnergía Local</span>
+    </a>
+    <ul class="navbar__links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="calculadora.html">Calculadora</a></li>
+      <li><a href="portfolio.html">Proyectos</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+    </ul>
+    <a href="contacto.html" class="btn-nav-cta desktop active">Presupuesto</a>
+    <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </div>
+  <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
+    <a href="servicios.html">Servicios</a>
+    <a href="calculadora.html">Calculadora</a>
+    <a href="portfolio.html">Proyectos</a>
+    <a href="contacto.html" class="active">Contacto</a>
+    <a href="contacto.html" class="btn-nav-cta">Presupuesto</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="cont-hero">
+    <div class="container">
+      <div class="cont-hero__grid">
+        <div>
+          <span class="eyebrow" style="color:var(--secondary)">Conecta con la luz</span>
+          <h1 class="cont-hero__title">
+            Empieza tu viaje hacia la
+            <span class="cont-hero__accent">independencia energética.</span>
+          </h1>
+          <p class="cont-hero__sub">
+            Ya sea que busques una instalación residencial o un proyecto industrial
+            a gran escala, nuestros expertos están aquí para guiarte.
+          </p>
+        </div>
+        <div class="cont-hero__img" aria-hidden="true">📬</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <section class="cont-main">
+    <div class="container">
+      <div class="cont-layout">
+
+        <!-- FORMULARIO -->
+        <div class="cont-form-wrap" id="formWrap">
+          <h2 class="cont-form__title">Consulta de Proyecto</h2>
+          <p class="cont-form__sub">Rellena el formulario y un técnico preparará tu estudio gratuito en menos de 24h.</p>
+
+          <!-- El action apunta al PHP -->
+          <form
+            class="cont-form"
+            id="contactForm"
+            action="php/procesar.php"
+            method="POST"
+            novalidate
+          >
+            <!-- Nombre + Email -->
+            <div class="cont-form__row">
+              <div class="cont-field">
+                <label class="cont-label" for="nombre">Nombre *</label>
+                <input id="nombre" name="nombre" type="text" class="cont-input" placeholder=" " required autocomplete="given-name" />
+                <span class="cont-field__err" id="err-nombre" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="cont-field">
+                <label class="cont-label" for="email">Correo Electrónico *</label>
+                <input id="email" name="email" type="email" class="cont-input" placeholder=" " required autocomplete="email" />
+                <span class="cont-field__err" id="err-email" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <!-- Teléfono + Tipo -->
+            <div class="cont-form__row">
+              <div class="cont-field">
+                <label class="cont-label" for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" class="cont-input" placeholder=" " autocomplete="tel" />
+              </div>
+              <div class="cont-field">
+                <label class="cont-label" for="tipo">Tipo de Proyecto</label>
+                <select id="tipo" name="tipo" class="cont-input cont-select">
+                  <option value="">Selecciona una opción</option>
+                  <option value="residencial">Residencial — vivienda unifamiliar</option>
+                  <option value="comunidad">Residencial — comunidad de vecinos</option>
+                  <option value="comercial">Comercial / PYME</option>
+                  <option value="industrial">Industrial / nave</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="cont-field">
+              <label class="cont-label" for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" class="cont-input cont-textarea" placeholder=" " rows="3"></textarea>
+            </div>
+
+            <!-- Error global -->
+            <div class="cont-form__global-err" id="globalErr" role="alert" aria-live="polite" hidden></div>
+
+            <button type="submit" class="cont-form__btn" id="submitBtn">
+              <span>Enviar Mensaje →</span>
+              <span class="cont-form__btn-loading" aria-hidden="true">Enviando…</span>
+            </button>
+          </form>
+        </div><!-- /cont-form-wrap -->
+
+        <!-- ÉXITO (oculto por defecto, JS lo muestra) -->
+        <div class="cont-success" id="successMsg" hidden aria-live="polite">
+          <div class="cont-success__icon" aria-hidden="true">✅</div>
+          <h3>¡Solicitud recibida!</h3>
+          <p>Un técnico se pondrá en contacto contigo en menos de 24 horas para preparar tu estudio personalizado.</p>
+          <a href="servicios.html" class="btn-primary" style="margin-top:24px">Volver a Servicios</a>
+        </div>
+
+        <!-- DATOS DE CONTACTO -->
+        <aside class="cont-info">
+          <h3 class="cont-info__title">Contacto Directo</h3>
+
+          <div class="cont-info__items">
+            <div class="cont-info__item">
+              <div class="cont-info__icon" aria-hidden="true">📍</div>
+              <div>
+                <h4>Dirección</h4>
+                <p>Av. de la Energía Solar, 42<br>08001 Barcelona, España</p>
+              </div>
+            </div>
+            <div class="cont-info__item">
+              <div class="cont-info__icon" aria-hidden="true">📞</div>
+              <div>
+                <h4>Teléfono</h4>
+                <p><a href="tel:+34931234567">+34 93 123 45 67</a></p>
+              </div>
+            </div>
+            <div class="cont-info__item">
+              <div class="cont-info__icon" aria-hidden="true">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:info@ecoenergialocal.es">info@ecoenergialocal.es</a></p>
+              </div>
+            </div>
+            <div class="cont-info__item">
+              <div class="cont-info__icon" aria-hidden="true">🕐</div>
+              <div>
+                <h4>Horario</h4>
+                <p>Lun–Vie: 8:00–18:00<br>Sáb: 9:00–13:00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini stats -->
+          <div class="cont-info__stats">
+            <div class="cont-info__stat">
+              <span>Instalaciones realizadas</span>
+              <strong>240+</strong>
+            </div>
+            <div class="cont-info__stat">
+              <span>Tiempo de respuesta</span>
+              <strong>&lt;24h</strong>
+            </div>
+            <div class="cont-info__stat">
+              <span>Valoración media</span>
+              <strong>4.9★</strong>
+            </div>
+          </div>
+        </aside>
+
+      </div><!-- /cont-layout -->
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div class="navbar__logo">☀</div>
+        <span class="brand-name">EcoEnergía Local</span>
+      </div>
+      <p>Instaladores de energía solar fotovoltaica certificados.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Páginas</h4>
+      <ul>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+        <li><a href="portfolio.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Aviso Legal</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="mailto:info@ecoenergialocal.es">info@ecoenergialocal.es</a></li>
+        <li><a href="tel:+34931234567">+34 93 123 45 67</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 EcoEnergía Local S.L. — CIF: B-12345678</p>
+    <span>Jose Vargas Salazar · SMR 2025/2026</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/contacto.js"></script>
+</body>
+</html>
