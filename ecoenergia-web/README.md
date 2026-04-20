@@ -3,7 +3,6 @@
 **Proyecto Final de Grado Medio en Sistemas Microinformáticos y Redes**  
 Alumno: Jose Vargas Salazar | Curso: 2025/2026
 
-Diseño basado en el sistema **"Luminous Stewardship"** (Stitch / Google).
 
 ---
 
@@ -38,15 +37,13 @@ ecoenergía-web/
 
 ## Tecnologías
 
-| Tecnología    | Versión | Uso                                         |
-|---------------|---------|---------------------------------------------|
-| HTML5         | —       | Estructura semántica de las 4 páginas       |
-| CSS3          | —       | Design system, animaciones, responsive      |
-| JavaScript    | ES6+    | Calculadora, filtros, validación, fetch     |
-| PHP           | 8.x     | Procesamiento del formulario de contacto    |
-| Apache2       | 2.4     | Servidor web en Ubuntu Server 24.04         |
-| VirtualBox    | —       | Entorno de virtualización local             |
-| Git + GitHub  | —       | Control de versiones                        |
+| Tecnología    | Versión | Uso                                          |
+|---------------|---------|----------------------------------------------|
+| Stitch        | —       | Estructura basica sobre el diseño de la web. |
+| HTML5         | —       | Estructura semántica de las 4 páginas        |
+| CSS3          | —       | Design system, animaciones, responsive       |
+| JavaScript    | ES6+    | Calculadora, filtros, validación, fetch      |
+| PHP           | 8.x     | Procesamiento del formulario de contacto     |
 
 ---
 
@@ -84,34 +81,6 @@ ecoenergía-web/
 | Footer           | 1 col  | 2 col   | 2+1+1+1 |
 
 *El proyecto destacado ocupa 2 columnas en desktop.
-
----
-
-## Despliegue en Apache2 (Ubuntu Server 24.04)
-
-```bash
-# 1. Instalar Apache2 y PHP
-sudo apt update
-sudo apt install apache2 php libapache2-mod-php -y
-
-# 2. Copiar el proyecto al directorio web
-sudo cp -r ecoenergía-web/* /var/www/html/
-
-# 3. Ajustar permisos
-sudo chown -R www-data:www-data /var/www/html/
-sudo chmod -R 755 /var/www/html/
-
-# 4. Reiniciar Apache
-sudo systemctl restart apache2
-sudo systemctl enable apache2
-
-# 5. Comprobar estado
-sudo systemctl status apache2
-
-# 6. Acceder desde el navegador
-# http://localhost           (desde la misma máquina)
-# http://IP_MAQUINA_VIRTUAL  (desde la red local)
-```
 
 ---
 
