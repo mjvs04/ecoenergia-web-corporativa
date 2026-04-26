@@ -72,7 +72,7 @@
 /* ── GRID PROYECTOS — 1→2→3 col ─────────────────────────── */
 .port-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 32px;
 }
 
@@ -99,6 +99,12 @@
   font-size: 52px;
   overflow: hidden;
   transition: transform .5s ease;
+}
+
+.port-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Info */
@@ -307,10 +313,14 @@
   line-height: 1.5;
 }
 
-/* ── RESPONSIVE ───────────────────────────────────────────── */
-@media (max-width: 1024px) {
-  .port-grid { grid-template-columns: 1fr 1fr; }
+/* ── RESPONSIVE (Mobile First) ───────────────────────────── */
+@media (min-width: 641px) {
+  .port-grid { grid-template-columns: repeat(2, 1fr); }
   .port-card--featured { grid-column: span 2; }
+}
+
+@media (min-width: 1025px) {
+  .port-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 900px) {
@@ -320,7 +330,6 @@
 }
 
 @media (max-width: 640px) {
-  .port-grid { grid-template-columns: 1fr; }
   .port-card--featured { grid-column: span 1; }
   .port-card--featured .port-card__img { aspect-ratio: 4/3; }
   .port-card--featured .port-card__info { flex-direction: column; }

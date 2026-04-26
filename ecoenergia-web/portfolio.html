@@ -15,22 +15,23 @@
 
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
+  <input type="checkbox" id="menu-toggle">
   <div class="navbar__inner">
-    <a href="servicios.html" class="navbar__brand">
-      <div class="navbar__logo">☀</div>
+    <a href="index.html" class="navbar__brand">
+      <div class="navbar__logo"><img src="img/logo.png" alt=""></div>
       <span class="brand-name">EcoEnergía Local</span>
     </a>
     <ul class="navbar__links">
-      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="index.html">Servicios</a></li>
       <li><a href="calculadora.html">Calculadora</a></li>
       <li><a href="portfolio.html" class="active">Proyectos</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
     <a href="contacto.html" class="btn-nav-cta desktop">Presupuesto</a>
-    <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <label for="menu-toggle" class="navbar__burger" aria-label="Abrir menú">☰</label>
   </div>
   <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
-    <a href="servicios.html">Servicios</a>
+    <a href="index.html">Servicios</a>
     <a href="calculadora.html">Calculadora</a>
     <a href="portfolio.html" class="active">Proyectos</a>
     <a href="contacto.html">Contacto</a>
@@ -72,7 +73,7 @@
 
       <!-- Proyecto 1: Destacado (ocupa 2 columnas en ≥ md) -->
       <article class="port-card port-card--featured" data-tipo="residencial" aria-label="Proyecto residencial destacado en Valencia">
-        <div class="port-card__img port-card__img--featured" aria-hidden="true">🏠</div>
+        <div class="port-card__img port-card__img--featured" aria-hidden="true"><img src="img/project1.jpeg" alt=""></div>
         <span class="port-card__tag">Proyecto Destacado</span>
         <div class="port-card__info">
           <div class="port-card__meta">
@@ -97,7 +98,7 @@
 
       <!-- Proyecto 2 -->
       <article class="port-card" data-tipo="comercial" aria-label="Proyecto comercial en Alicante">
-        <div class="port-card__img" aria-hidden="true">🏭</div>
+        <div class="port-card__img" aria-hidden="true"><img src="img/project5.jpg" alt=""></div>
         <div class="port-card__info">
           <div class="port-card__meta">
             <span class="port-card__tipo">Comercial</span>
@@ -114,7 +115,7 @@
 
       <!-- Proyecto 3 -->
       <article class="port-card" data-tipo="residencial" aria-label="Proyecto residencial en Denia">
-        <div class="port-card__img" aria-hidden="true">🏡</div>
+        <div class="port-card__img" aria-hidden="true"><img src="img/project6.jpg" alt=""></div>
         <div class="port-card__info">
           <div class="port-card__meta">
             <span class="port-card__tipo">Residencial</span>
@@ -131,7 +132,7 @@
 
       <!-- Proyecto 4 -->
       <article class="port-card" data-tipo="industrial" aria-label="Proyecto industrial en Castellón">
-        <div class="port-card__img" aria-hidden="true">🏗️</div>
+        <div class="port-card__img" aria-hidden="true"><img src="img/project2.jpg" alt=""></div>
         <div class="port-card__info">
           <div class="port-card__meta">
             <span class="port-card__tipo">Industrial</span>
@@ -148,7 +149,7 @@
 
       <!-- Proyecto 5 -->
       <article class="port-card" data-tipo="residencial" aria-label="Proyecto residencial en Tarragona">
-        <div class="port-card__img" aria-hidden="true">🌊</div>
+        <div class="port-card__img" aria-hidden="true"><img src="img/project3.jpg" alt=""></div>
         <div class="port-card__info">
           <div class="port-card__meta">
             <span class="port-card__tipo">Residencial</span>
@@ -189,7 +190,7 @@
   <div class="footer__grid">
     <div class="footer__brand">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-        <div class="navbar__logo">☀</div>
+        <div class="navbar__logo"><img src="img/logo.png" alt=""></div>
         <span class="brand-name">EcoEnergía Local</span>
       </div>
       <p>Instaladores de energía solar fotovoltaica certificados.</p>
@@ -197,7 +198,7 @@
     <div class="footer__col">
       <h4>Páginas</h4>
       <ul>
-        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="index.html">Servicios</a></li>
         <li><a href="calculadora.html">Calculadora</a></li>
         <li><a href="portfolio.html">Proyectos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -225,7 +226,36 @@
   </div>
 </footer>
 
-<script src="js/nav.js"></script>
-<script src="js/portfolio.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.port-filter');
+    const cards = document.querySelectorAll('.port-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Quitar la clase activa de todos los botones
+        filterBtns.forEach(b => {
+          b.classList.remove('port-filter--active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        
+        // Añadir la clase activa al botón seleccionado
+        btn.classList.add('port-filter--active');
+        btn.setAttribute('aria-pressed', 'true');
+
+        const filter = btn.getAttribute('data-filter');
+
+        // Mostrar u ocultar tarjetas según el filtro seleccionado
+        cards.forEach(card => {
+          if (filter === 'todos' || card.getAttribute('data-tipo') === filter) {
+            card.classList.remove('port-card--hidden');
+          } else {
+            card.classList.add('port-card--hidden');
+          }
+        });
+      });
+    });
+  });
+</script>
 </body>
 </html>

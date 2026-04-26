@@ -15,22 +15,23 @@
 
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
+  <input type="checkbox" id="menu-toggle">
   <div class="navbar__inner">
-    <a href="servicios.html" class="navbar__brand">
-      <div class="navbar__logo">☀</div>
+    <a href="index.html" class="navbar__brand">
+      <div class="navbar__logo"><img src="img/logo.png" alt=""></div>
       <span class="brand-name">EcoEnergía Local</span>
     </a>
     <ul class="navbar__links">
-      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="index.html">Servicios</a></li>
       <li><a href="calculadora.html">Calculadora</a></li>
       <li><a href="portfolio.html">Proyectos</a></li>
       <li><a href="contacto.html" class="active">Contacto</a></li>
     </ul>
     <a href="contacto.html" class="btn-nav-cta desktop active">Presupuesto</a>
-    <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <label for="menu-toggle" class="navbar__burger" aria-label="Abrir menú">☰</label>
   </div>
   <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
-    <a href="servicios.html">Servicios</a>
+    <a href="index.html">Servicios</a>
     <a href="calculadora.html">Calculadora</a>
     <a href="portfolio.html">Proyectos</a>
     <a href="contacto.html" class="active">Contacto</a>
@@ -55,7 +56,7 @@
             a gran escala, nuestros expertos están aquí para guiarte.
           </p>
         </div>
-        <div class="cont-hero__img" aria-hidden="true">📬</div>
+        <div class="cont-hero__img" aria-hidden="true"><img src="img/contacto.jpg" alt=""></div>
       </div>
     </div>
   </section>
@@ -74,9 +75,7 @@
           <form
             class="cont-form"
             id="contactForm"
-            action="php/procesar.php"
-            method="POST"
-            novalidate
+            action="#"
           >
             <!-- Nombre + Email -->
             <div class="cont-form__row">
@@ -131,7 +130,7 @@
           <div class="cont-success__icon" aria-hidden="true">✅</div>
           <h3>¡Solicitud recibida!</h3>
           <p>Un técnico se pondrá en contacto contigo en menos de 24 horas para preparar tu estudio personalizado.</p>
-          <a href="servicios.html" class="btn-primary" style="margin-top:24px">Volver a Servicios</a>
+          <a href="index.html" class="btn-primary" style="margin-top:24px">Volver a Servicios</a>
         </div>
 
         <!-- DATOS DE CONTACTO -->
@@ -197,7 +196,7 @@
   <div class="footer__grid">
     <div class="footer__brand">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-        <div class="navbar__logo">☀</div>
+        <div class="navbar__logo"><img src="img/logo.png" alt=""></div>
         <span class="brand-name">EcoEnergía Local</span>
       </div>
       <p>Instaladores de energía solar fotovoltaica certificados.</p>
@@ -205,7 +204,7 @@
     <div class="footer__col">
       <h4>Páginas</h4>
       <ul>
-        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="index.html">Servicios</a></li>
         <li><a href="calculadora.html">Calculadora</a></li>
         <li><a href="portfolio.html">Proyectos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -233,7 +232,5 @@
   </div>
 </footer>
 
-<script src="js/nav.js"></script>
-<script src="js/contacto.js"></script>
 </body>
 </html>

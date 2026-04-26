@@ -172,11 +172,10 @@ h1, h2, h3, h4, .brand-name, .font-headline {
   transform: translateY(-1px);
 }
 
-/* Hamburguesa mobile */
+/* Hamburguesa mobile - CSS ONLY */
+#menu-toggle { display: none; }
 .navbar__burger {
   display: none;
-  background: none;
-  border: none;
   cursor: pointer;
   font-size: 28px;
   color: var(--primary);
@@ -191,6 +190,10 @@ h1, h2, h3, h4, .brand-name, .font-headline {
   padding: 12px 24px 16px;
   background: var(--surf-white);
   border-top: 1px solid rgba(187,202,191,.25);
+}
+
+#menu-toggle:checked ~ .navbar__mobile {
+  display: flex;
 }
 
 .navbar__mobile a {
@@ -346,11 +349,23 @@ footer {
 }
 
 /* ── GRID RESPONSIVE GENÉRICO ───────────────────────────────── */
-/* 1 col → 2 col → 3 col  */
-.grid-auto {
+/* 1 col móvil -> 3 col escritorio  */
+.grid-responsive {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* ── CARD BASE ──────────────────────────────────────────────── */

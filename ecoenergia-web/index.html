@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Servicios y precios de instalaciones solares — EcoEnergía Local S.L." />
+  <title>Servicios | EcoEnergía Local S.L.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/servicios.css" />
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar" id="navbar">
+  <input type="checkbox" id="menu-toggle">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__brand">
+      <div class="navbar__logo"><img src="img/logo.png" alt=""></div>
+      <span class="brand-name">EcoEnergía Local</span>
+    </a>
+    <ul class="navbar__links">
+      <li><a href="index.html"   class="active">Servicios</a></li>
+      <li><a href="calculadora.html">Calculadora</a></li>
+      <li><a href="portfolio.html">Proyectos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="contacto.html" class="btn-nav-cta desktop">Presupuesto</a>
+    <label for="menu-toggle" class="navbar__burger" aria-label="Abrir menú">☰</label>
+  </div>
+  <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
+    <a href="index.html"   class="active">Servicios</a>
+    <a href="calculadora.html">Calculadora</a>
+    <a href="portfolio.html">Proyectos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="contacto.html" class="btn-nav-cta">Presupuesto</a>
+  </div>
+</nav>
+
+<!-- ── MAIN ── -->
+<main>
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero__grid">
+        <!-- Texto -->
+        <div class="hero__text">
+          <span class="eyebrow">Excelencia en Ingeniería</span>
+          <h1 id="hero-title" class="hero__title">
+            Ecosistemas de<br>
+            <span class="hero__title-accent">Solar de Precisión.</span>
+          </h1>
+          <p class="hero__sub">
+            Más allá de la instalación, diseñamos tu independencia energética.
+            Soluciones personalizadas para un rendimiento máximo y armonía arquitectónica.
+          </p>
+          <a href="contacto.html" class="btn-primary">Configura tu Sistema →</a>
+        </div>
+        <!-- Visual -->
+        <div class="hero__visual">
+          <div class="hero__img-wrap">
+            <div class="hero__img-placeholder" aria-hidden="true"><img src="img/imagenlanding1.png" alt="" style="width: 100%;"></div>
+          </div>
+          <div class="hero__badge" aria-label="Información de eficiencia">
+            <div class="hero__badge-icon">⚡</div>
+            <div>
+              <strong class="hero__badge-title">Eficiencia Primero</strong>
+              <p class="hero__badge-desc">Hasta 25.000 kWh anuales con tecnología bifacial Nivel 1.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING CARDS -->
+  <section class="pricing" aria-labelledby="pricing-title">
+    <div class="container">
+      <div class="pricing__header">
+        <h2 id="pricing-title" class="section-title">Paquetes de Autoconsumo</h2>
+        <p class="section-sub">Precios transparentes diseñados para sostenibilidad premium y gestión energética a largo plazo.</p>
+      </div>
+
+      <!-- 1→2→3 col adaptativo -->
+      <div class="grid-responsive pricing__grid">
+
+        <!-- Básico -->
+        <article class="card pricing__card" aria-label="Plan Hogar Básico">
+          <div class="pricing__card-head">
+            <h3 class="pricing__name">Hogar Básico</h3>
+            <p class="pricing__sub">Independencia Energética Esencial</p>
+          </div>
+          <div class="pricing__price">4.850€ <span>/estim.</span></div>
+          <ul class="pricing__features">
+            <li><span class="check" aria-hidden="true">✓</span> 6 × Placas solares 450W Nivel 1</li>
+            <li><span class="check" aria-hidden="true">✓</span> Inversor Híbrido Monofásico</li>
+            <li><span class="check" aria-hidden="true">✓</span> <strong>2.700 kWh</strong> Generación Anual</li>
+            <li><span class="check" aria-hidden="true">✓</span> Garantía de producto 10 años</li>
+            <li><span class="check" aria-hidden="true">✓</span> App de monitorización básica</li>
+          </ul>
+          <a href="contacto.html" class="btn-outline pricing__cta">Seleccionar Básico</a>
+        </article>
+
+        <!-- Pro (destacado) -->
+        <article class="card pricing__card pricing__card--featured" aria-label="Plan Hogar Pro">
+          <span class="pricing__badge">Más Popular</span>
+          <div class="pricing__card-head">
+            <h3 class="pricing__name">Hogar Pro</h3>
+            <p class="pricing__sub">Experiencia Solar Exclusiva</p>
+          </div>
+          <div class="pricing__price pricing__price--primary">8.900€ <span>/estim.</span></div>
+          <ul class="pricing__features">
+            <li><span class="check check--gold" aria-hidden="true">✓</span> 12 × Paneles «All-Black» 450W</li>
+            <li><span class="check check--gold" aria-hidden="true">✓</span> Inversor Híbrido Trifásico Premium</li>
+            <li><span class="check check--gold" aria-hidden="true">✓</span> <strong>5.400 kWh</strong> Generación Anual</li>
+            <li><span class="check check--gold" aria-hidden="true">✓</span> Batería LFP 10 kWh integrada</li>
+            <li><span class="check check--gold" aria-hidden="true">✓</span> Gestión inteligente con IA</li>
+          </ul>
+          <a href="contacto.html" class="btn-primary pricing__cta">Diseñar mi Sistema</a>
+        </article>
+
+        <!-- Business -->
+        <article class="card pricing__card" aria-label="Plan Business">
+          <div class="pricing__card-head">
+            <h3 class="pricing__name">Business</h3>
+            <p class="pricing__sub">Infraestructura Energética Crítica</p>
+          </div>
+          <div class="pricing__price">Desde 24.500€ <span>/consultar</span></div>
+          <ul class="pricing__features">
+            <li><span class="check" aria-hidden="true">✓</span> 30+ paneles bifaciales Nivel 1</li>
+            <li><span class="check" aria-hidden="true">✓</span> Sistema trifásico industrial</li>
+            <li><span class="check" aria-hidden="true">✓</span> <strong>+18.000 kWh</strong> Generación Anual</li>
+            <li><span class="check" aria-hidden="true">✓</span> Auditoría energética incluida</li>
+            <li><span class="check" aria-hidden="true">✓</span> SLA 24h y soporte dedicado</li>
+          </ul>
+          <a href="contacto.html" class="btn-outline pricing__cta">Hablar con un Experto</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTÁNDAR ECOENERGÍA (Bento) -->
+  <section class="estandar" aria-labelledby="estandar-title">
+    <div class="container">
+      <h2 id="estandar-title" class="section-title">El Estándar EcoEnergía</h2>
+      <div class="estandar__bento">
+
+        <!-- Grande - Bifacial -->
+        <div class="bento__big">
+          <div class="bento__big-img" aria-label="Tecnología bifacial solar" role="img"><img src="img/img-landingpage2.jpeg" alt=""></div>
+          <div class="bento__big-content">
+            <h3>Tecnología Bifacial</h3>
+            <p>Captura de luz por ambos lados para aumentar el rendimiento hasta un 30% respecto a módulos tradicionales.</p>
+          </div>
+        </div>
+
+        <!-- Métricas en tiempo real -->
+        <div class="bento__small bento__small--light">
+          <div class="bento__icon">📊</div>
+          <h4>Métricas en Tiempo Real</h4>
+          <p>Supervisa tu ahorro desde cualquier dispositivo con nuestro panel de control exclusivo.</p>
+        </div>
+
+        <!-- Garantía 25a -->
+        <div class="bento__small bento__small--gold">
+          <span class="bento__big-num">25a</span>
+          <span class="bento__big-label">Garantía de Rendimiento</span>
+        </div>
+
+        <!-- Red inteligente -->
+        <div class="bento__small bento__small--light">
+          <div class="bento__icon">⚡</div>
+          <h4>Listo para Red Inteligente</h4>
+          <p>Compatible con los estándares de autoconsumo colectivo y vertido a red.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="proceso" aria-labelledby="proceso-title">
+    <div class="container">
+      <span class="eyebrow" style="display:block;text-align:center">El Camino al Ahorro</span>
+      <h2 id="proceso-title" class="section-title" style="text-align:center">Fases de la Instalación</h2>
+
+      <div class="proceso__steps" role="list">
+        <div class="proceso__step proceso__step--done" role="listitem">
+          <div class="proceso__circle" aria-label="Fase 1 completada">01</div>
+          <strong>Consultoría</strong>
+          <span>Fase 01</span>
+        </div>
+        <div class="proceso__line proceso__line--done" aria-hidden="true"></div>
+        <div class="proceso__step proceso__step--done" role="listitem">
+          <div class="proceso__circle" aria-label="Fase 2 completada">02</div>
+          <strong>Ingeniería</strong>
+          <span>Fase 02</span>
+        </div>
+        <div class="proceso__line proceso__line--done" aria-hidden="true"></div>
+        <div class="proceso__step proceso__step--done" role="listitem">
+          <div class="proceso__circle" aria-label="Fase 3 completada">03</div>
+          <strong>Instalación</strong>
+          <span>Fase 03</span>
+        </div>
+        <div class="proceso__line" aria-hidden="true"></div>
+        <div class="proceso__step proceso__step--pending" role="listitem">
+          <div class="proceso__circle proceso__circle--pending" aria-label="Fase final pendiente">04</div>
+          <strong>Activación</strong>
+          <span>Final</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ──────────────────────────────────────────────── -->
+<footer>
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div class="navbar__logo"><img src="img/logo.png" alt=""></div>
+        <span class="brand-name">EcoEnergía Local</span>
+      </div>
+      <p>Instaladores de energía solar fotovoltaica certificados. Comprometidos con la transición energética.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="index.html">Solar Residencial</a></li>
+        <li><a href="index.html">Solar Industrial</a></li>
+        <li><a href="index.html">Baterías</a></li>
+        <li><a href="index.html">Cargadores EV</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="portfolio.html">Proyectos</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Aviso Legal</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 EcoEnergía Local S.L. — CIF: B-12345678</p>
+    <span>Jose Vargas Salazar · SMR 2025/2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
