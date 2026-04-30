@@ -20,7 +20,6 @@ Esta web soluciona ese problema ofreciendo:
 
 ## Tecnologías Utilizadas
 - **Frontend:** HTML5, CSS3 y JavaScript vanilla
-- **Backend:** PHP 8 básico (procesamiento de formularios)
 - **Servidor:** Apache2 en Ubuntu Server 24.04 LTS
 - **Control de versiones:** Git + GitHub
 - **Entorno:** Servidor local en máquina virtual (VirtualBox)
