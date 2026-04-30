@@ -23,14 +23,12 @@ ecoenergía-web/
 │   ├── portfolio.css     ← Estilos exclusivos de portfolio.html
 │   └── contacto.css      ← Estilos exclusivos de contacto.html
 │
-├── js/
-│   ├── nav.js            ← Menú hamburguesa + sombra al scroll (shared)
-│   ├── calculadora.js    ← Fórmulas de ahorro + barras + animaciones
-│   ├── portfolio.js      ← Sistema de filtrado de proyectos
-│   └── contacto.js       ← Validación de formulario + fetch a PHP
-│
-└── php/
-    └── procesar.php      ← Backend: sanitización, validación, mail()
+└── js/
+    ├── nav.js            ← Menú hamburguesa + sombra al scroll (shared)
+    ├── calculadora.js    ← Fórmulas de ahorro + barras + animaciones
+    ├── portfolio.js      ← Sistema de filtrado de proyectos
+    └── contacto.js       ← Validación de formulario + fetch a PHP
+
 ```
 
 ---
@@ -40,10 +38,10 @@ ecoenergía-web/
 | Tecnología    | Versión | Uso                                          |
 |---------------|---------|----------------------------------------------|
 | Stitch        | —       | Estructura basica sobre el diseño de la web. |
+| Gemini        | —       | Creacionnd imagenes para la web.             |
 | HTML5         | —       | Estructura semántica de las 4 páginas        |
 | CSS3          | —       | Design system, animaciones, responsive       |
 | JavaScript    | ES6+    | Calculadora, filtros, validación, fetch      |
-| PHP           | 8.x     | Procesamiento del formulario de contacto     |
 
 ---
 
@@ -105,4 +103,4 @@ git push
 
 ---
 
-*Jose Vargas Salazar · Grado Medio SMR · 2025/2026*
+*Jose Vargas Salazar · IES Tierrablanca SMR · 2025/2026*
